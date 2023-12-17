@@ -1,0 +1,20 @@
+/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --main-font-family: "Inter", sans-serif;
+  --accent-font: "PressStart2P", "fantasy";
+  --card-font-weight: 400;
+  --font-text-color: #000;
+  --card-subtitle-font-weight: 700;
+  --second-background-color: #000;
+  --main-background-color: #fff;
+  --bg: repeating-linear-gradient(to right, #d3d3d3 2px, transparent 4px),
+    repeating-linear-gradient(to bottom, #d3d3d3 2px, transparent 4px),
+    linear-gradient(to bottom, #e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%);
+  --card-container-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
+  --emblem-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  --title-font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  --button-text-color: var(--main-background-color);
+  --fill-color: #ff0000;
+  --like-color: #000;
+  --text-color: #fff;
+}
