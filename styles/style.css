@@ -84,6 +84,8 @@
 .theme-menu__button:disabled::before {
   content: "▶";
   position: absolute;
+  left: 0;
+  top: 0;
   animation: drifting 0.5s infinite ease-in-out alternate;
   inset-inline-start: -19px;
 }
@@ -179,8 +181,8 @@
 ) {
   .card__image-label {
     text-shadow: none;
-    text-rendering: 1px var(--text-color);
     -webkit-text-stroke: 1px var(--text-color);
+    text-stroke: 1px var(--text-color);
   }
 }
 
@@ -192,31 +194,31 @@
   block-size: 100%;
 }
 
-.card__first .card__image {
+.card__image_filter_sepia {
   filter: sepia(80%);
 }
 
-.card__second .card__image {
+.card__image_filter_brightness {
   filter: brightness(200%);
 }
 
-.card__third .card__image {
+.card__image_filter_saturate {
   filter: saturate(80%) hue-rotate(30deg);
 }
 
-.card__fourth .card__image {
+.card__image_filter_invert {
   filter: invert(80%);
 }
 
-.card__fifth .card__image {
+.card__image_filter_grayscale {
   filter: grayscale(82%) sepia(50%);
 }
 
-.card__sixth .card__image {
+.card__image_filter_blur {
   filter: blur(10px);
 }
 
-.card__seventh .card__image {
+.card__image_filter_contrast {
   filter: hue-rotate(90deg) contrast(80%) sepia(50%);
 }
 
@@ -259,7 +261,7 @@
   line-height: 90%;
   text-transform: inherit;
   background-color: inherit;
-  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s linear, fill 0.3s linear;
 }
 
 .card__icon-button:hover {
@@ -272,7 +274,6 @@
 
 .card__icon-button:focus-visible {
   border: 2px solid var(--second-background-color);
-  transition: border 0.3s ease;
   cursor: pointer;
 }
 
@@ -302,23 +303,19 @@
   font-size: 14px;
   background-color: transparent;
   transition: box-shadow 0.3s ease;
-  font-variation-settings: "wght" var(--card-font-weight, 400);
+  font-weight: var(--card-font-weight, 400);
 }
 
 .button:hover {
-  transition: fill 0.3s linear;
   cursor: pointer;
 }
 
 .button:focus {
   box-shadow: 2px 2px 0px var(--like-color);
-  outline: none;
 }
 
 .button:focus-visible {
   border: 2px solid var(--second-background-color);
-  outline: none;
-  transition: box-shadow 0.3s;
 }
 
 .button::after {
@@ -334,20 +331,17 @@
 }
 
 .button:hover:after {
-  transition: transform 0.5s ease-in-out;
   transform: translateX(0);
 }
 
 .button:hover .button__text {
   color: var(--text-color);
-  mix-blend-mode: difference;
 }
 
 .button:hover .img-floppy {
   z-index: 3;
   fill: var(--text-color);
   stroke: var(--text-color);
-  mix-blend-mode: difference;
 }
 
 .like-icon {
@@ -365,21 +359,6 @@
 
 /* -----------footer----------------------------------- */
 
-.footer {
-  background-color: var(--main-background-color);
-}
-
-.footer-text {
-  z-index: 2;
-  color: var(--text-color);
-  font-family: var(--accent-font);
-  font-size: 14px;
-  transition: box-shadow 0.3s;
-  transition-timing-function: ease;
-  cursor: pointer;
-  mix-blend-mode: difference;
-}
-
 .save-button {
   display: flex;
   flex-wrap: wrap;
@@ -389,6 +368,7 @@
   width: 310px;
   padding: 15px;
   background-color: transparent;
+  background-color: var(--main-background-color);
   text-wrap: nowrap;
 }
 

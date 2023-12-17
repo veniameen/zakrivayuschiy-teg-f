@@ -90,7 +90,7 @@
 /* --------------Анимация размера сердца-------------------- */
 
 .like-icon.is-liked .heart {
-  animation: heart 0.3s ease-out 0.1s 2 alternate;
+  animation: heart 0.3s ease-out 0.1s 1 alternate;
   transform-origin: center;
 }
 
@@ -111,7 +111,7 @@
 }
 
 .like-icon.is-liked .sparks {
-  animation: sparks 0.3s ease-in 0.3s 1 alternate backwards;
+  animation: sparks 0.3s ease-in 0.3s 1 alternate none;
 }
 
 @keyframes sparks {
