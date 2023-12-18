@@ -35,6 +35,10 @@
 }
 
 /* ------------Анимация сердца---------------------------- */
+.like-icon .contour {
+  fill: var(--like-contour-color, #000000);
+  transition: fill 0.1s linear;
+}
 
 .like-icon .core {
   fill: var(--main-background-color);

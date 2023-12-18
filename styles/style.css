@@ -248,7 +248,7 @@
   padding: 0;
   background-color: inherit;
   transition: border 0.3s ease;
-  cursor: unset;
+  cursor: pointer;
   block-size: 38px;
 }
 
@@ -261,11 +261,8 @@
   line-height: 90%;
   text-transform: inherit;
   background-color: inherit;
-  transition: box-shadow 0.3s linear, fill 0.3s linear;
-}
-
-.card__icon-button:hover {
   cursor: pointer;
+  transition: box-shadow 0.3s linear;
 }
 
 .card__icon-button:focus {
@@ -306,10 +303,6 @@
   font-weight: var(--card-font-weight, 400);
 }
 
-.button:hover {
-  cursor: pointer;
-}
-
 .button:focus {
   box-shadow: 2px 2px 0px var(--like-color);
 }
@@ -334,14 +327,8 @@
   transform: translateX(0);
 }
 
-.button:hover .button__text {
-  color: var(--text-color);
-}
-
 .button:hover .img-floppy {
   z-index: 3;
-  fill: var(--text-color);
-  stroke: var(--text-color);
 }
 
 .like-icon {
@@ -370,10 +357,6 @@
   background-color: transparent;
   background-color: var(--main-background-color);
   text-wrap: nowrap;
-}
-
-.footer__button:focus {
-  outline: none;
 }
 
 /* ------------Диалог-окно----------------------------------- */
